@@ -1,0 +1,2 @@
+document.write(`<table border='solid black'><tr><th>Ancho</th><th>Alto</th><th>Max Ancho</th><th>Max Alto</th><th>Bits color</th><th>Pixeles</th></tr>`);
+document.write(`<tr><td>${screen.width}</td><td>${screen.height}</td><td>${screen.availWidth}</td><td>${screen.availHeight}</td><td>${screen.colorDepth}</td><td>${screen.pixelDepth}</td></tr></table>`);

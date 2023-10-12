@@ -1,0 +1,6 @@
+capitulo1: introduccion a gir
+capitulo2: fluo de trabajo basico
+capitulo3: gestion de ramas
+capitulo4: repositorios remotos
+Capítulo 5: Conceptos avanzados
+capitulo6: toma
