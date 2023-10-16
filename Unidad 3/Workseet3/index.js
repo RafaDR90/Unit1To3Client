@@ -32,13 +32,48 @@ arrayRemoveFirstWord=arrayString;
 arrayRemoveFirstWord.shift();
 //place a new word at the start of the array
 arrayRemoveFirstWord.unshift("hola");
-document.write(arrayRemoveFirstWord)
+//document.write(arrayRemoveFirstWord)
 //replace some elements
 arrayRemoveFirstWord.splice(2,1,"pepe")
 arrayRemoveFirstWord.splice(4,1,"ramona");
-document.write("<br>"+arrayRemoveFirstWord);
+//document.write("<br>"+arrayRemoveFirstWord);
 
 //2
-nombres["Jhon Wick", "Pepito Lospalotes","Jessica Alba","Alguien Mas"];
-nombresJ=nombres.filter(x=>x.startsWith("J"));
-document.write("<br>"+nombresJ);
+/* nombres=["Jhon Wick", "Pepito Lospalotes","Jessica Alba","Alguien Mas"];
+nombresJ=nombres.filter(x=>x.startsWith("J")).map(nombre=>{
+  partes=nombre.split(" ");
+  document.write(partes[0][0]+partes[1][0]+"<br>")
+  return partes[0][0]+partes[1][0];
+}); */
+
+const tablero = [
+  [null],
+  [null,34, 21, 32, 41, 25],
+  [null,14, 42, 43, 14, 31],
+  [null,54, 45, 52, 42, 23],
+  [null,33, 15, 51, 31, 35],
+  [null,21, 52, 33, 13, 23]
+];
+
+function encuentraTesoro(tablero){
+  encontrado=false;
+  aux=0;
+  pasos=[];
+  posicion=[1,1];
+  while(!encontrado){
+      if(posicion.join("")!=tablero[posicion[0]][posicion[1]]){
+          aux=tablero[posicion[0]][posicion[1]];
+          pasos.push(tablero[posicion[0]][posicion[1]])
+          posicion[0]=Math.floor(parseInt(aux)/10);
+          posicion[1]=(parseInt(aux)%10);
+      }else{
+          encontrado=true;
+          document.write(`Enhorabuena, el tesoro estaba en las coordenadas ${posicion.join("")} <br>Has pasado por las casillas: `);
+          for(x of pasos){
+              document.write("<br>"+x);
+          }
+      }
+  }
+}
+
+encuentraTesoro(tablero);
