@@ -76,4 +76,25 @@ function encuentraTesoro(tablero){
   }
 }
 
-encuentraTesoro(tablero);
+//encuentraTesoro(tablero);
+//5
+function celsiusToFahrenheit(celsius) {
+  fahrenheit = (celsius * 9/5) + 32;
+  console.log(`${celsius}°C is ${fahrenheit}°F`);
+}
+
+
+function fahrenheitToCelsius(fahrenheit) {
+  const celsius = (fahrenheit - 32) * 5/9;
+  console.log(`${fahrenheit}°F is ${celsius}°C`);
+}
+
+celsiusTemperatura = 25;
+celsiusToFahrenheit(celsiusTemperatura);
+
+fahrenheitTemperatura = 77;
+fahrenheitToCelsius(fahrenheitTemperatura);
+
+
+
+
